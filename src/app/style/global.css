@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+:root{
+    --primary-color: #a5adff;
+    --secondary-color: #e7ff53;
+
+    --purple-light-color: #dcdfff;
+    --black-color: #202020;
+    --grey-color: #97989a;
+
+    --dark-orange-color: #eb4335;
+    --blue-color: #1b46de;
+    --red-color: #e10000;
+    --green-color: #85ea56;
+    --pink-color: #ffa5e0;
+
+    --title-font-family: 'Nunito Sans', sans-serif;
+    --page-font-family: 'Roboto', sans-serif;
+}
+
+button{
+    cursor: pointer;
+}

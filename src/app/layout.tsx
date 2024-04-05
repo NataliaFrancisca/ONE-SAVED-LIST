@@ -1,17 +1,23 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], weight: ['100', '200', '300', '400', '400', '600', '500', '700', '800', '900']});
+import './style/global.css';
+import "./style/default.css";
 
 export const metadata: Metadata = {
-  title: "ONE. SAVED LIST"
+  title: 'ONE. MODERN LIST',
+  description: 'save your links'
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+  children
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
