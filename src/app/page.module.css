@@ -1,0 +1,10 @@
+.page_home{
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.page_home img{
+    display: flex;
+    height: 64%;
+    margin: 0 auto;
+}
