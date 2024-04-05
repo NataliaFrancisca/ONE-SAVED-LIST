@@ -1,0 +1,7 @@
+.appName-component {
+    color: var(--black-color);
+    font-size: 28px;
+    font-weight: 800;
+    font-family: var(--font-inter);
+}
+  
