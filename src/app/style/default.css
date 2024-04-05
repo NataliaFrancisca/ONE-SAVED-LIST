@@ -1,0 +1,39 @@
+.default-page-layout{
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.default-page-layout._light{
+    background-color: var(--purple-light-color);
+}
+
+.default-page-layout._dark{
+    background-color: var(--primary-color);
+}
+
+.default-button-component {
+    width: 248px;
+    padding: 20px 0px;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+  
+    border-radius: 12px;
+    border: 2px solid #202020;
+    background: var(--secondary-color);
+    box-shadow: 7px 8px 0px 0px var(--black-color);
+  
+    color: var(--black-color);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.default-button-component._google{
+    background-color:var(--dark-orange-color);
+}
+  
