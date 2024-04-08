@@ -9,7 +9,11 @@ export interface IFormLogin{
     password: string
 }
 
-export interface IForm extends IFormLogin {name?: string};
+export interface IForm {
+    name?: string,
+    email: string,
+    password: string
+}
 
 export interface IErrorForm{
     name?: string | boolean;
@@ -18,3 +22,7 @@ export interface IErrorForm{
     google?: string | boolean;
 }
 
+export interface IFormAuthType{
+    REGISTER?: boolean,
+    LOGIN?: boolean
+}
