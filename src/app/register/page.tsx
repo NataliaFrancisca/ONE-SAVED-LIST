@@ -2,8 +2,8 @@
 import Link from "next/link";
 import AppName from "../components/AppName/AppName";
 import { useState } from "react";
-import { useRegister } from "@/hooks/useRegister";
 import Loader from "../components/Loader/Loader";
+import { useForm } from "@/hooks/useForm";
 
 const Register = () => {
 
@@ -15,7 +15,7 @@ const Register = () => {
     }
   });
 
-  const { error, loading, onSubmit } = useRegister(userRegister.user);
+  const { error, loading, onSubmit } = useForm(userRegister.user, {REGISTER: true});
 
   return(
     <main className="default-page-layout _light">
@@ -63,19 +63,19 @@ const Register = () => {
         </fieldset>
 
         <button type="submit" className="default-button-component">
-                    REGISTER
+          REGISTER
         </button>
 
         <span className="txt-or">OR</span>
 
         <button className="default-button-component _google" onClick={async () => { await onSubmit(true); }}>
-                    REGISTER WITH GOOGLE
+          REGISTER WITH GOOGLE
         </button>
 
         <span className="form-link-message">
-                    ALREADY HAVE AN ACCOUNT?{' '}
-          <Link href="/login">
-                        SIGN IN
+            ALREADY HAVE AN ACCOUNT?{' '}
+          <Link href="/login" aria-label="Navigate to login page">
+            SIGN IN
           </Link>
         </span>
       </form>

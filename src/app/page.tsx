@@ -17,7 +17,7 @@ export default function Home () {
         tabIndex={2}
       />
 
-      <button className="default-button-component" onClick={() => router.push('/register')} aria-label="Navigate into the register page" tabIndex={3}>
+      <button className="default-button-component" onClick={() => { router.push('/register'); }} aria-label="Navigate into the register page" tabIndex={3}>
         GET STARTED
       </button>
     </main>
