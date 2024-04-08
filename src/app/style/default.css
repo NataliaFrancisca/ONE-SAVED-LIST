@@ -37,3 +37,73 @@
     background-color:var(--dark-orange-color);
 }
   
+.default-form-component{
+    display: flex;
+    flex-direction: column;
+}
+
+.default-form-component legend{
+    color: var(--black-color);
+    font-size: 1.12em;
+    font-weight: 800;
+    margin: 30px 0 20px 0;
+    text-decoration-line: underline;
+    text-align: end;
+}
+
+.default-form-component button{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.default-form-component fieldset{
+    align-self: center;
+    color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.default-form-component fieldset label {
+    font-size: 1.12em;
+    font-weight: 700;
+}
+
+.default-form-component fieldset input {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid var(--black-color);
+    height: 44px;
+    padding: 10px 16px;
+    width: 100%;
+}
+
+.default-form-component span.txt-or{
+    color: var(--black-color);
+    font-size: 1.12em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.default-form-component span.form-link-message{
+    color: var(--black-color);
+    font-size: 0.9em;
+    font-weight: 700;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.default-form-component span.form-link-message a{
+    color: var(--blue-color);
+    font-weight: 900;
+    text-decoration-line: underline;
+}
+
+@media screen and (min-width: 860px){
+    .default-form-component{
+        width: 30%;
+        align-self: center;
+    }
+}
