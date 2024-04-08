@@ -10,8 +10,10 @@
     "test": "vitest"
   },
   "dependencies": {
+    "firebase": "^10.10.0",
     "next": "14.1.4",
     "next-router-mock": "^0.9.13",
+    "nookies": "^2.5.2",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -24,6 +26,7 @@
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-react": "^7.34.1",
