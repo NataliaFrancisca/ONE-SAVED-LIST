@@ -1,7 +1,7 @@
-import { signIn, signInWithGoogle } from "@/firebase/auth/signin";
-import { signUp } from "@/firebase/auth/singup";
-import { type IFormRegister, type IForm, type IFormAuthType } from "@/ts/interface";
-import { validateForm } from "@/validation/form";
+import { signIn, signInWithGoogle } from "../firebase/auth/signin";
+import { signUp } from "../firebase/auth/singup";
+import { type IFormRegister, type IForm, type IFormAuthType } from "../ts/interface";
+import { validateForm } from "../validation/form";
 
 export async function FormAuthService(formResponse: IForm, withGoogle = false, type: IFormAuthType){
   const { responseIsValid, responseValidationMessage } = validateForm(formResponse);
@@ -41,7 +41,7 @@ export async function FormAuthService(formResponse: IForm, withGoogle = false, t
   }
 }
 
-async function getAuthService(formResponse: IForm, withGoogle = false, type: IFormAuthType){
+export async function getAuthService(formResponse: IForm, withGoogle = false, type: IFormAuthType){
   
   if(withGoogle){
     return await signInWithGoogle()
