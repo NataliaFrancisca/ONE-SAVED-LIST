@@ -1,9 +1,13 @@
-import { expect, test, describe } from 'vitest'
+import { expect, test, describe, beforeAll, vi, } from 'vitest'
 import { render, screen } from "@testing-library/react";
 import { userEvent} from "@testing-library/user-event";
 import React from 'react';
 import Home from './page';
 import mockRouter from 'next-router-mock';
+
+beforeAll(() => {
+  vi.mock("next/router", () => require("next-router-mock"));
+});
 
 describe('HomePage component', () => {
   test('Should render the title', () => {

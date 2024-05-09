@@ -3,7 +3,7 @@ import Link from "next/link";
 import AppName from "../components/AppName/AppName";
 import { useState } from "react";
 import Loader from "../components/Loader/Loader";
-import { useForm } from "@/hooks/useForm";
+import { useForm } from '../../hooks/useForm';
 
 const Register = () => {
 
@@ -21,7 +21,7 @@ const Register = () => {
     <main className="default-page-layout _light">
       <AppName />
 
-      <form className="default-form-component" onSubmit={async () => { await onSubmit(); }}>
+      <form className="default-form-component" role="form" onSubmit={async () => { await onSubmit(); }}>
         <legend>REGISTER.</legend>
 
         {loading && <Loader color="PURPLE" />}
