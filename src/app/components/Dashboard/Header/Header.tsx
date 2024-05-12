@@ -7,7 +7,7 @@ import { type IUserInfo } from '@/ts/interface';
 const HeaderDashboard = (props: {userData: IUserInfo}) => {
 
   const { toggleInput, onToggleInput } = useToggleInput();
-  const { displayName, photo } = props.userData;
+  const { displayName, photoURL } = props.userData;
 
   return(
     <header className={style['header-component']}>
@@ -18,7 +18,7 @@ const HeaderDashboard = (props: {userData: IUserInfo}) => {
           <img src='icon/search.svg' />
         </button>
 
-        <img className={style['user-photo']} src={`${photo}`} />
+        <img className={style['user-photo']} src={`${photoURL}`} />
 
         <button>
           <img src='icon/menu.svg' />
