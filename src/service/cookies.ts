@@ -1,13 +1,17 @@
-import { type UserInfo } from "firebase/auth";
+import { type IUserInfo } from '@/ts/interface';
 import nookies from 'nookies';
 
 const COOKIE_NAME = 'USER_DATA';
 
-export const setCookie = (data: UserInfo) => {
+export const setCookie = (data: IUserInfo) => {
   const oneDay = 24 * 60 * 60 * 1000
-  nookies.set(null, COOKIE_NAME, JSON.stringify(data), {
+
+  const { email, displayName, photoURL } = data;
+
+  nookies.set(null, COOKIE_NAME, JSON.stringify({email, displayName, photoURL}), {
     maxAge: oneDay * 7
   });
+  
   console.log("COOKIE SAVED SUCCESS");
 };
 
@@ -15,10 +19,12 @@ export const deleteCookie = () => {
   nookies.destroy(null, COOKIE_NAME);
 }
 
-export const getCookie = () => {
-  const cookies = nookies.get(null);
+export const getCookie = async() => {
+  const { cookies } = await import('next/headers')
+  const cookieManager = cookies()
+  const response = cookieManager.get('USER_DATA');
 
-  if(cookies[COOKIE_NAME]){
-    return JSON.parse(cookies[COOKIE_NAME]);
+  if(response?.value){
+    return JSON.parse(response.value)
   }
 };
