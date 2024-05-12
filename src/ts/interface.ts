@@ -26,3 +26,10 @@ export interface IFormAuthType{
     REGISTER?: boolean,
     LOGIN?: boolean
 }
+
+export interface IUserInfo {
+    email: string,
+    displayName: string,
+    photoURL: string
+}
+  
