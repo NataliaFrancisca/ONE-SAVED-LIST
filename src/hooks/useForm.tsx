@@ -1,6 +1,6 @@
 import { setCookie } from '../service/cookies';
 import { FormAuthService } from '../service/form';
-import { type IForm, type IErrorForm, type IFormRegister, type IFormAuthType} from "@/ts/interface";
+import { type IForm, type IErrorForm, type IFormRegister, type IFormAuthType, type IUserInfo} from "@/ts/interface";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -22,7 +22,7 @@ export const useForm = (response: IForm, type: IFormAuthType) => {
     setError(responseService.error);
 
     if(responseService.status && responseService.data){
-      setCookie(responseService.data);
+      setCookie(responseService.data as IUserInfo);
       router.push('/dashboard');
     }
 
