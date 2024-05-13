@@ -7,7 +7,7 @@ import { getCookie } from '@/service/cookies';
 const HeaderDashboard = () => {
 
   const { toggleInput, onToggleInput } = useToggleInput();
-  const { displayName, photo } = getCookie()
+  const { displayName, photoURL } = getCookie()
 
   return(
     <header className={style['header-component']}>
@@ -18,7 +18,7 @@ const HeaderDashboard = () => {
           <img src='icon/search.svg' />
         </button>
 
-        <img className={style['user-photo']} src={`${photo}`} />
+        <img className={style['user-photo']} src={`/user-image/user-${photoURL}`} />
 
         <button>
           <img src='icon/menu.svg' />
