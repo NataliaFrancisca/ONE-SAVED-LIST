@@ -33,3 +33,11 @@ export interface IUserInfo {
     photoURL: string
 }
   
+export interface IFormContent {
+    title: string;
+    link: string;
+    type: string;
+    image?: string;
+}
+
+
