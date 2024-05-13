@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggle } from "@/lib/features/inputToggle/inputToggle";
 import { updateInputSearchValue } from "@/lib/features/inputSearchValue/inputSearchValue";
 import { updateUserContent } from "@/lib/features/userContent/userContent";
-import { type IFormContent } from "@/ts/interface";
+import { type IUserResource } from "@/ts/interface";
 
 export const useToggleInput = () => {
   const toggleInput = useSelector((state: {toggle: {value: boolean}}) => state.toggle.value);
@@ -27,10 +27,10 @@ export const useInputValue = () => {
 }
 
 export const useUserContent = () => {
-  const userContent = useSelector((state: {userContent: {value: IFormContent[]}}) => state.userContent.value);
+  const userContent = useSelector((state: {userContent: {value: IUserResource[]}}) => state.userContent.value);
   const dispatch = useDispatch();
 
-  const onUpdateUserContent = (value: IFormContent[]) => {
+  const onUpdateUserContent = (value: IUserResource[]) => {
     dispatch(updateUserContent(value));
   }
 

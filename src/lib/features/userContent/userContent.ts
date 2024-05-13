@@ -1,11 +1,11 @@
-import { type IFormContent } from "@/ts/interface";
+import { type IUserResource } from "@/ts/interface";
 import { createSlice } from "@reduxjs/toolkit";
 
-export interface IUserContent{
-  value: IFormContent[]
+export interface IUserResource{
+  value: IUserResource[]
 }
 
-const initialState: IUserContent = {
+const initialState: IUserResource = {
   value: []
 }
 

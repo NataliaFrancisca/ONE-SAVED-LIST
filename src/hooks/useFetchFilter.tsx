@@ -1,11 +1,11 @@
 import { useSearchParams } from "next/navigation";
 import { useInputValue } from "./useRedux";
 import { useEffect, useState } from "react";
-import { type IFormContent } from "@/ts/interface";
+import { type IUserResource } from "@/ts/interface";
 import { filterUsingFilterType, filterUsingSearchType } from "@/utils/filter";
 
-export const useFetchFilter = (userBaseData: IFormContent[]) => {
-  const [filterResponse, setFilterResponse] = useState<IFormContent[]>([]);
+export const useFetchFilter = (userBaseData: IUserResource[]) => {
+  const [filterResponse, setFilterResponse] = useState<IUserResource[]>([]);
 
   const { inputValue } = useInputValue();
 
@@ -74,7 +74,7 @@ export const useFetchFilter = (userBaseData: IFormContent[]) => {
 // import { useSearchParams } from "next/navigation";
 // import { useInputValue, useToggleInput } from "./useRedux";
 // import { useEffect, useState } from "react";
-// import { type IFormContent } from "@/ts/interface";
+// import { type IUserResource } from "@/ts/interface";
 // import { filterUsingFilterType, filterUsingSearchType } from "@/utils/filter";
 // import { useSelector } from "react-redux";
 
@@ -86,9 +86,9 @@ export const useFetchFilter = (userBaseData: IFormContent[]) => {
 
 //   const { toggleInput } = useToggleInput();
 
-//   const userContent = useSelector((state: {userContent: {value: IFormContent[]}}) => state.userContent.value);
+//   const userContent = useSelector((state: {userContent: {value: IUserResource[]}}) => state.userContent.value);
 
-//   const [filterTypeResponse, setFilterTypeResponse] = useState<IFormContent[]>([])
+//   const [filterTypeResponse, setFilterTypeResponse] = useState<IUserResource[]>([])
 
 //   useEffect(() => {
 //     if(inputValue !== ''){
