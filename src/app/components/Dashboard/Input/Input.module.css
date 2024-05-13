@@ -1,0 +1,38 @@
+.input-component{
+    width: 100%;
+    padding: 20px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 4px;
+    border: 2px solid #202020;
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.input-component.isHidden{
+    display: none;
+}
+
+.input-component img{
+    width: 15px;
+    height: 15px;
+}
+
+.input-component input{
+    background-color: transparent;
+    color: var(--grey-color);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.input-component input:focus{
+    outline: none;
+}
+
+.input-component button{
+    background-color: transparent;
+    cursor: pointer;
+}

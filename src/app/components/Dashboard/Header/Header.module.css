@@ -1,0 +1,37 @@
+.header-component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 23px 0;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+}
+
+.header-menu .user-photo{
+    margin: 0 38px 0 38px
+}
+
+.header-menu button{
+    background-color: transparent;
+    cursor: pointer;
+    height: max-content;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.header-menu button:hover{
+    background-color: var(--primary-color);
+}
+
+.header-component h1{
+    color: var(--black-color);
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
