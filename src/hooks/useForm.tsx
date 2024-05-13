@@ -22,7 +22,8 @@ export const useForm = (response: IForm, type: IFormAuthType) => {
     setError(responseService.error);
 
     if(responseService.status && responseService.data){
-      setCookie(responseService.data as IUserInfo);
+      const { displayName, photoURL, email } = responseService.data as IUserInfo;
+      setCookie({displayName, email, photoURL});
       router.push('/dashboard');
     }
 
