@@ -2,12 +2,12 @@
 import style  from './Header.module.css';
 import Input from '../Input/Input';
 import { useToggleInput } from '@/hooks/useRedux';
-import { type IUserInfo } from '@/ts/interface';
+import { getCookie } from '@/service/cookies';
 
-const HeaderDashboard = (props: {userData: IUserInfo}) => {
+const HeaderDashboard = () => {
 
   const { toggleInput, onToggleInput } = useToggleInput();
-  const { displayName, photoURL } = props.userData;
+  const { displayName, photo } = getCookie()
 
   return(
     <header className={style['header-component']}>
@@ -18,7 +18,7 @@ const HeaderDashboard = (props: {userData: IUserInfo}) => {
           <img src='icon/search.svg' />
         </button>
 
-        <img className={style['user-photo']} src={`${photoURL}`} />
+        <img className={style['user-photo']} src={`${photo}`} />
 
         <button>
           <img src='icon/menu.svg' />
