@@ -20,7 +20,8 @@ export async function signUp(user: IFormRegister) {
     const userResponse = response.user;
 
     await updateProfile(userResponse, {
-      displayName: user.name
+      displayName: user.name,
+      photoURL: 'option-one.svg'
     });
 
     return {
