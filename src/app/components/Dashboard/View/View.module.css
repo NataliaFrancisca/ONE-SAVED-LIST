@@ -1,0 +1,9 @@
+.view-component{
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: orange;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
