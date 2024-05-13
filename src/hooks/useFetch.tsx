@@ -1,7 +1,7 @@
-import { getResource } from "@/firebase/database/resource";
-import { type IFormContent } from "@/ts/interface";
+import { type IUserResource } from "@/ts/interface";
 import { useEffect, useState } from "react";
 import { useUserContent } from "./useRedux";
+import { DataBaseService } from "@/firebase/database/service-db";
 
 export const useFetch = () => {
 
@@ -9,8 +9,8 @@ export const useFetch = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchAllContent = async() => {
-  
-    const data = await getResource() as {content: IFormContent[]}
+    const database = new DataBaseService();
+    const data = await database.get() as {content: IUserResource[]}
     
     if(data){
       onUpdateUserContent(data.content);
