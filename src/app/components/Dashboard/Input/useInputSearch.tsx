@@ -15,13 +15,16 @@ export const useInputSearch = () => {
 
     if(inputSearchValue){
       onUpdateInputValue(inputSearchValue.toUpperCase())
-      router.push('/dashboard');
     }
+
+    router.push('/dashboard');
   }
 
   const onCloseInputSearch = () => {
     event?.preventDefault();
     onToggleInput();
+    onUpdateInputValue('');
+    router.push('/dashboard');
   }
 
   return { inputSearchValue, setInputSearchValue, onSubmit, onCloseInputSearch }
